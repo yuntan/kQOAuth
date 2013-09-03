@@ -151,6 +151,8 @@ public:
      */
     QNetworkAccessManager* networkManager() const;
 
+	QNetworkReply* reply(KQOAuthRequest*) const;
+
 Q_SIGNALS:
     // This signal will be emitted after each request has got a reply.
     // Parameter is the raw response from the service.

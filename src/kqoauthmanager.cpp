@@ -430,6 +430,15 @@ QNetworkAccessManager * KQOAuthManager::networkManager() const {
 
 }
 
+QNetworkReply * KQOAuthManager::reply(KQOAuthRequest *request) const {
+	Q_D(const KQOAuthManager);
+
+	if(d->requestMap.find(request) != d->requestMap.end())
+		return *(d->requestMap.find(request));
+	else
+		return NULL;
+}
+
 
 //////////// Public convenience API /////////////
 
