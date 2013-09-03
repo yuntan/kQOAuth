@@ -11,6 +11,7 @@
 *.la
 *.a
 *.pro.user
+*.pro.user.*
 moc_*
 qrc_*
 *.o
